@@ -3,15 +3,19 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Portfolio Clément Lapasset`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Clément Lapasset - Portfolio`,
+    siteUrl: `https://portfolioclementlapassetmain.gatsbyjs.io/`
   },
-  plugins: ["gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    "gatsby-plugin-mdx", {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "pages",
+        "path": "./src/pages/"
+      },
+      __key: "pages"
     },
-    __key: "pages"
-  }]
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+  ]
 };
