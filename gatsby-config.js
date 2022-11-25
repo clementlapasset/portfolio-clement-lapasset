@@ -7,15 +7,16 @@ module.exports = {
     siteUrl: `https://portfolioclementlapassetmain.gatsbyjs.io/`
   },
   plugins: [
-    "gatsby-plugin-mdx", {
-      resolve: 'gatsby-source-filesystem',
+    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-source-filesystem",
       options: {
-        "name": "pages",
-        "path": "./src/pages/"
-      },
-      __key: "pages"
+        name: `projects`,
+        path: `${__dirname}/projects`,
+      }
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
   ]
 };
