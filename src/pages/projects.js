@@ -1,6 +1,9 @@
 import * as React from "react"
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout.js'
+import {
+  navLinkText,
+} from '../components/layout.module.css'
 import Seo from "../components/seo.js"
 
 
@@ -12,7 +15,7 @@ const Projects = ({ data }) => {
           {
             data.allMdx.nodes.map(node => (
               <li key={node.frontmatter.title}>
-                <Link to={`/project/${node.frontmatter.slug}`}>
+                <Link className={navLinkText} to={`/project/${node.frontmatter.slug}`}>
                   {node.frontmatter.title}
                 </Link>
                 <p>CLIENT : {node.frontmatter.client}</p>
@@ -24,7 +27,6 @@ const Projects = ({ data }) => {
           }
         </ul>
       </Layout>
-
     </main>
   )
 }

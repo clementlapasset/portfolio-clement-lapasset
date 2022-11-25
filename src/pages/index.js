@@ -5,7 +5,11 @@ import Seo from '../components/seo'
 const IndexPage = () => {
   return (
     <Layout pageTitle="HOMEPAGE">
-      <p>HOMEPAGE</p>
+      <p>
+        DÉVELOPPEUR WEB REACT
+        BASÉ À MARSEILLE
+        DISPONIBLE EN FREELANCE
+      </p>
     </Layout>
   )
 }
