@@ -2,21 +2,16 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
-import Layout from '../../components/layout'
-import Seo from '../../components/seo'
+import Layout from '../../components/global/Layout'
+import Seo from '../../components/global/Seo'
 
 const ProjectPage = ({ data, children }) => {
-  const heroImg = getImage(data.mdx.frontmatter.hero_img)
   const desktopImg1 = getImage(data.mdx.frontmatter.desktop_img_1)
   return (
     < main >
-      <Layout pageTitle={data.mdx.frontmatter.title}>
-        <GatsbyImage
-          image={heroImg}
-          alt={data.mdx.frontmatter.hero_img_alt}
-        />
+      <Layout pageTitle={data.mdx.frontmatter.number}>
+        <h2>{data.mdx.frontmatter.title}</h2>
         {children}
-        <p>{data.mdx.frontmatter.number}</p>
         <GatsbyImage
           image={desktopImg1}
           alt={data.mdx.frontmatter.desktop_img_1_alt}
@@ -36,11 +31,6 @@ export const query = graphql`
         title
         url
         number
-        hero_img {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
         hero_img_alt
         desktop_img_1 {
           childImageSharp {
