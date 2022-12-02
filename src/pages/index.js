@@ -7,12 +7,14 @@ import ProjectSection from "../components/sections/ProjectSection"
 import AboutSection from "../components/sections/AboutSection"
 import ContactSection from "../components/sections/ContactSection"
 
+import "../../css/main.css"
+
+
 
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="PROJETS">
-      <p>DÉVELOPPEUR WEB REACT BASÉ À MARSEILLE DISPONIBLE EN FREELANCE</p>
+    <Layout>
       <ProjectSection />
       <AboutSection />
       <ContactSection />

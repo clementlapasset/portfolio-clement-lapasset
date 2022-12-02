@@ -5,6 +5,9 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/global/Layout'
 import Seo from '../../components/global/Seo'
 
+import "../../../css/main.css"
+
+
 const ProjectPage = ({ data, children }) => {
   const desktopImg1 = getImage(data.mdx.frontmatter.desktop_img_1)
   return (

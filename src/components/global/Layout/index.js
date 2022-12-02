@@ -1,37 +1,35 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { Link } from 'gatsby'
+import "../../../../css/main.css"
 
-const Layout = ({ pageTitle, children }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children }) => {
 
   return (
-    <div>
-      <nav>
-        <Link to="/"><header >{data.site.siteMetadata.title}</header></Link>
-        <ul>
-          <li>
-            PROJETS
-          </li>
-          <li>
-            À PROPOS
-          </li>
-          <li >
-            CONTACT
-          </li>
-        </ul>
+    <div className='layout'>
+      <nav className='navbar'>
+        <div className="container">
+          <Link className='logo' to="/"><header>CL</header></Link>
+          <ul className='menu'>
+            <Link to="/">
+              <li>
+                PROJETS
+              </li>
+            </Link>
+            <Link to="/">
+              <li>
+                À PROPOS
+              </li>
+            </Link>
+            <Link to="/">
+              <li >
+                CONTACT
+              </li>
+            </Link>
+          </ul>
+        </div>
       </nav>
       <main>
-        <h1>{pageTitle}</h1>
         {children}
-        <footer>© 2022</footer>
       </main>
     </div>
   )
