@@ -8,7 +8,10 @@ const Layout = ({ children }) => {
     <div className='layout'>
       <nav className='navbar'>
         <div className="container">
-          <Link className='logo' to="/"><header>CL</header></Link>
+          <header className='logo'>
+            <Link to="/"><div className="sticky-part">CL</div></Link>
+            <div className="static-part">ément</div>
+          </header>
           <ul className='menu'>
             <Link to="/">
               <li>

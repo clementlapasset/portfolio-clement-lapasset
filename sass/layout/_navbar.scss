@@ -5,6 +5,7 @@
   left: 0;
   margin: auto;
   width: 100%;
+  color: #fffce9;
 
   .container {
     display: flex;
@@ -12,6 +13,9 @@
     height: 70px;
     align-items: center;
     padding: 0 20px;
+    .logo {
+      display: flex;
+    }
     .menu {
       display: flex;
       align-items: center;

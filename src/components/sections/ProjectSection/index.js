@@ -31,6 +31,7 @@ const ProjectSection = () => {
   return (
     <div className='project-section g-section'>
       <p>DÉVELOPPEUR WEB REACT <br /> BASÉ À MARSEILLE <br /> DISPONIBLE EN FREELANCE</p>
+      <h1>PROJETS</h1>
       <ul>
         {data.allMdx.nodes.map(node => (
           <li key={node.frontmatter.title}>
@@ -49,7 +50,6 @@ const ProjectSection = () => {
           </li>
         ))}
       </ul>
-      <h1>PROJETS</h1>
     </div>
   )
 }
