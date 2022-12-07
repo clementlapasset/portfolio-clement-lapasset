@@ -1,18 +1,26 @@
+.hero-section {
+  color: #fffce9;
+  padding: 20px;
+  height: calc(100vh - 100px);
+  .logo {
+    span {
+      opacity: 0;
+    }
+  }
+  .intro {
+    margin-top: 20px;
+  }
+}
+
 .project-section {
   color: #fffce9;
+
   .project-link {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     .project-image {
       grid-column-start: 2;
       margin-top: 20px;
-    }
-    .project-info {
-      display: none;
-      margin-left: 45px;
-    }
-    .project-image:hover ~ .project-info {
-      display: block;
     }
   }
 }

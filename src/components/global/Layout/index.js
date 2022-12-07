@@ -6,31 +6,24 @@ const Layout = ({ children }) => {
 
   return (
     <div className='layout'>
-      <nav className='navbar'>
-        <div className="container">
-          <header className='logo'>
-            <Link to="/"><div className="sticky-part">CL</div></Link>
-            <div className="static-part">ément</div>
-          </header>
-          <ul className='menu'>
-            <Link to="/">
-              <li>
-                PROJETS
-              </li>
-            </Link>
-            <Link to="/">
-              <li>
-                À PROPOS
-              </li>
-            </Link>
-            <Link to="/">
-              <li >
-                CONTACT
-              </li>
-            </Link>
-          </ul>
-        </div>
-      </nav>
+      <header>
+        <nav className='navbar'>
+          <div className="container">
+            <Link className='home-btn' to="/">CL</Link>
+            <ul className='menu'>
+              <Link className='menu-item' to="/">
+                <li>PROJETS</li>
+              </Link>
+              <Link className='menu-item' to="/">
+                <li>À PROPOS</li>
+              </Link>
+              <Link className='menu-item' to="/">
+                <li>CONTACT</li>
+              </Link>
+            </ul>
+          </div>
+        </nav>
+      </header>
       <main>
         {children}
       </main>

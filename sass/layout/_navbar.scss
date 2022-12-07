@@ -1,25 +1,25 @@
 .navbar {
-  position: sticky;
-  z-index: $zindex-sticky;
-  top: 0;
-  left: 0;
-  margin: auto;
+  position: fixed;
   width: 100%;
   color: #fffce9;
-
+  margin-top: 20px;
   .container {
     display: flex;
     justify-content: space-between;
-    height: 70px;
     align-items: center;
     padding: 0 20px;
-    .logo {
+    .home-btn {
       display: flex;
     }
     .menu {
       display: flex;
       align-items: center;
       gap: 50px;
+      .menu-item {
+        :hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
