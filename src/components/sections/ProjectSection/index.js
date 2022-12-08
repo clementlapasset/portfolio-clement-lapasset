@@ -33,18 +33,22 @@ const ProjectSection = () => {
 
   return (
     <div className='project-section g-section'>
-      <h1>PROJETS</h1>
+      <h1 className='g-title'>PROJETS</h1>
       <ul>
         {data.allMdx.nodes.map(node => (
           <li key={node.frontmatter.title}>
             <div className="project-container" style={{ backgroundColor: node.frontmatter.bg_color, color: node.frontmatter.text_color }}>
-              <h1 className='project-number'>{node.frontmatter.number}</h1>
-              <h2 className='project-title'>{node.frontmatter.title}</h2>
               <div className="project-info">
-                <p>CLIENT : {node.frontmatter.client}</p>
-                <p>SECTEUR : {node.frontmatter.domain}</p>
-                <p>RÔLE : {node.frontmatter.role}</p>
-                <p>CATÉGORIE : {node.frontmatter.type}</p>
+                <h1 className='project-number'>{node.frontmatter.number}</h1>
+                <div className="col">
+                  <h2 className='project-title'>{node.frontmatter.title}</h2>
+                  <div className="project-description">
+                    <p> <span>CLIENT</span> - {node.frontmatter.client}</p>
+                    <p> <span>SECTEUR</span> - {node.frontmatter.domain}</p>
+                    <p> <span>RÔLE</span> - {node.frontmatter.role}</p>
+                    <p> <span>CATÉGORIE</span>  {node.frontmatter.type}</p>
+                  </div>
+                </div>
               </div>
               <Link className='project-link' to={`/project/${node.frontmatter.slug}`}>
                 <GatsbyImage className='project-image'
