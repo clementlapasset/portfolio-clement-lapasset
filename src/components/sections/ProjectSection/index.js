@@ -6,7 +6,7 @@ import "../../../../css/main.css"
 const ProjectSection = () => {
   const data = useStaticQuery(graphql`
   query {
-    allMdx {
+    allMdx(sort: {frontmatter: {number: ASC}}) {
         nodes {
           id
           frontmatter {
