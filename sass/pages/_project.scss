@@ -1,0 +1,33 @@
+.project-page {
+  color: #fffce9;
+  padding: 20px;
+  height: calc(100vh - 75px);
+  padding-top: 75px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .left-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding-bottom: 50px;
+    .mobile-img {
+      height: 100%;
+    }
+    .project-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 75%;
+      align-self: end;
+      .project-description {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 50px;
+  }
+}
