@@ -1,14 +1,34 @@
 .hero-section {
   color: #fffce9;
+  mix-blend-mode: difference;
   padding: 20px;
   height: calc(100vh - 100px);
   .logo {
+    font-family: "Quick Marker", sans-serif;
+    font-size: 78px;
     span {
       opacity: 0;
     }
   }
   .intro {
     margin-top: 20px;
+    position: relative;
+    font-family: "Prismatic11-Outline", sans-serif;
+    font-size: 30px;
+    &::before {
+      font-family: "Prismatic11-Outline", sans-serif;
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      font-family: "Prismatic10-Bevel", sans-serif;
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 }
 

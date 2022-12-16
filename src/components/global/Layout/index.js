@@ -12,13 +12,13 @@ const Layout = ({ children }) => {
           <div className="container">
             <Link className='home-btn' to="/">CL</Link>
             <ul className='menu'>
-              <AnchorLink className='menu-item' to="#projects">
+              <AnchorLink className='menu-item' to="/#projects">
                 <li>PROJETS</li>
               </AnchorLink>
-              <AnchorLink className='menu-item' to="#about">
+              <AnchorLink className='menu-item' to="/#about">
                 <li>À PROPOS</li>
               </AnchorLink>
-              <AnchorLink className='menu-item' to="#contact">
+              <AnchorLink className='menu-item' to="/#contact">
                 <li>CONTACT</li>
               </AnchorLink>
             </ul>
