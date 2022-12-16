@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import "../../../../css/main.css"
 
 const Layout = ({ children }) => {
@@ -11,15 +12,15 @@ const Layout = ({ children }) => {
           <div className="container">
             <Link className='home-btn' to="/">CL</Link>
             <ul className='menu'>
-              <Link className='menu-item' to="/">
+              <AnchorLink className='menu-item' to="#projects">
                 <li>PROJETS</li>
-              </Link>
-              <Link className='menu-item' to="/">
+              </AnchorLink>
+              <AnchorLink className='menu-item' to="#about">
                 <li>À PROPOS</li>
-              </Link>
-              <Link className='menu-item' to="/">
+              </AnchorLink>
+              <AnchorLink className='menu-item' to="#contact">
                 <li>CONTACT</li>
-              </Link>
+              </AnchorLink>
             </ul>
           </div>
         </nav>

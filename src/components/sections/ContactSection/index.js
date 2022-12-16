@@ -5,7 +5,7 @@ import "../../../../css/main.css"
 
 const ContactSection = () => {
   return (
-    <div className='contact-section g-section'>
+    <div className='contact-section g-section' id='contact'>
       <h1 className='g-title'>CONTACT</h1>
       <div className="email">
         clement.lapasset@gmail.com

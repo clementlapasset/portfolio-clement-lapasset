@@ -32,7 +32,7 @@ const ProjectSection = () => {
 `)
 
   return (
-    <div className='project-section g-section'>
+    <div className='project-section g-section' id='projects'>
       <h1 className='g-title'>PROJETS</h1>
       <ul>
         {data.allMdx.nodes.map(node => (
@@ -46,7 +46,7 @@ const ProjectSection = () => {
                     <p> <span>CLIENT</span> - {node.frontmatter.client}</p>
                     <p> <span>SECTEUR</span> - {node.frontmatter.domain}</p>
                     <p> <span>RÔLE</span> - {node.frontmatter.role}</p>
-                    <p> <span>CATÉGORIE</span>  {node.frontmatter.type}</p>
+                    <p> <span>CATÉGORIE</span> - {node.frontmatter.type}</p>
                   </div>
                 </div>
               </div>

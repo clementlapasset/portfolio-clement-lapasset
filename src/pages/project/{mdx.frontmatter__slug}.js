@@ -8,10 +8,13 @@ import Seo from '../../components/global/Seo'
 import "../../../css/main.css"
 
 
-const ProjectPage = ({ data, children, to }) => {
+const ProjectPage = ({ data, children }) => {
   const mobileImg = getImage(data.mdx.frontmatter.mobile_img)
   const desktopImg1 = getImage(data.mdx.frontmatter.desktop_img_1)
   const desktopImg2 = getImage(data.mdx.frontmatter.desktop_img_2)
+
+  const url = data.mdx.frontmatter.url
+  console.log(url)
   return (
 
     <Layout pageTitle={data.mdx.frontmatter.number}>
@@ -28,10 +31,11 @@ const ProjectPage = ({ data, children, to }) => {
           <div className="project-text">
             <h2 className='project-title'>{data.mdx.frontmatter.title}</h2>
             <div className="project-description">{children}</div>
-            {/* {to ? (
-              <Link to={data.mdx.frontmatter.url}>Test URL</Link>
-            ) : null} */}
-            <Link className='project-link' to={data.mdx.frontmatter.url} target="_blank">Visiter le site</Link>
+            {url ? (
+              <Link className='project-link' to={data.mdx.frontmatter.url} target="_blank">Visiter le site</Link>
+            ) : (
+              <div>Site non-accessible</div>
+            )}
           </div>
         </div>
         <div className="right-container">
