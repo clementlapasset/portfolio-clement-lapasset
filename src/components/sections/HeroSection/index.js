@@ -7,7 +7,9 @@ const HeroSection = () => {
         <span>CL</span>ément
       </div>
       <div className="intro">
-        DÉVELOPPEUR WEB REACT <br /> BASÉ À MARSEILLE <br /> DISPONIBLE EN FREELANCE
+        <div className='layered-font' text="DEVELOPPEUR WEB REACT">DEVELOPPEUR WEB REACT</div>
+        <div className='layered-font' text="BASE A MARSEILLE">BASE A MARSEILLE </div>
+        <div className='layered-font' text="DISPONIBLE EN FREELANCE">DISPONIBLE EN FREELANCE</div>
       </div>
     </div>
   )

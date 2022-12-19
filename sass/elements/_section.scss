@@ -2,7 +2,7 @@
   color: #fffce9;
   mix-blend-mode: difference;
   padding: 20px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 220px);
   .logo {
     font-family: "Quick Marker", sans-serif;
     font-size: 78px;
@@ -12,34 +12,79 @@
   }
   .intro {
     margin-top: 20px;
-    position: relative;
-    font-family: "Prismatic11-Outline", sans-serif;
-    font-size: 30px;
-    &::before {
-      font-family: "Prismatic11-Outline", sans-serif;
-      font-size: 30px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    &::after {
-      font-family: "Prismatic10-Bevel", sans-serif;
-      font-size: 30px;
-      position: absolute;
-      top: 0;
-      left: 0;
+    .layered-font {
+      position: relative;
+      font-family: "Prismatic4-Base", sans-serif;
+      font-size: 28px;
     }
   }
 }
 
 .project-section {
   color: #fffce9;
+  .g-title {
+    position: relative;
+    font: 150px "Prismatic11-Outline";
+    color: white;
+    #second-layer {
+      position: absolute;
+      font: 150px "Prismatic6-Right";
+      top: -13px;
+      left: 0;
+      color: #8c8e8a;
+      &::before {
+        content: attr(text);
+        font: 150px "Prismatic7-Left";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: black;
+      }
+      &::after {
+        content: attr(text);
+        font: 150px "Prismatic10-Bevel";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: black;
+        z-index: 2;
+      }
+    }
+    &::before {
+      content: attr(text);
+      font: 150px "Prismatic5-Bottom";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      color: #636362;
+    }
+    &::after {
+      content: attr(text);
+      font: 150px "Prismatic8-Top";
+      position: absolute;
+      top: -9px;
+      left: 0;
+      color: black;
+    }
+  }
   .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
     .project-info {
       display: flex;
+      .project-number {
+        position: relative;
+        font: 150px "Prismatic4-base";
+        &::after {
+          content: attr(text);
+          font: 150px "Prismatic10-Bevel";
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: black;
+        }
+      }
       .col {
         margin: 0 auto;
         .project-description {

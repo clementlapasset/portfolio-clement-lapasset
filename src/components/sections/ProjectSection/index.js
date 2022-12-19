@@ -33,13 +33,18 @@ const ProjectSection = () => {
 
   return (
     <div className='project-section g-section' id='projects'>
-      <h1 className='g-title'>PROJETS</h1>
+      <div className='g-title' id="first-layer" text="PROJETS">
+        PROJETS
+        <div id="second-layer" text="PROJETS">
+          PROJETS
+        </div>
+      </div>
       <ul>
         {data.allMdx.nodes.map(node => (
           <li key={node.frontmatter.title}>
             <div className="project-container" style={{ backgroundColor: node.frontmatter.bg_color, color: node.frontmatter.text_color }}>
               <div className="project-info">
-                <h1 className='project-number'>{node.frontmatter.number}</h1>
+                <h1 className='project-number' text={node.frontmatter.number}>{node.frontmatter.number}</h1>
                 <div className="col">
                   <h2 className='project-title'>{node.frontmatter.title}</h2>
                   <div className="project-description">
