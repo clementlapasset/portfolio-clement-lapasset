@@ -2,7 +2,7 @@
   color: #fffce9;
   mix-blend-mode: difference;
   padding: 20px;
-  height: calc(100vh - 220px);
+  height: calc(100vh - 250px);
   .logo {
     font-family: "Quick Marker", sans-serif;
     font-size: 78px;
@@ -22,16 +22,26 @@
 
 .project-section {
   color: #fffce9;
+  .homepage-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 52vw;
+    .white-arrow-down {
+      width: 85px;
+      height: 85px;
+      align-self: center;
+    }
+  }
   .g-title {
     position: relative;
     font: 150px "Prismatic11-Outline";
     color: white;
-    #second-layer {
+    .second-layer {
       position: absolute;
       font: 150px "Prismatic6-Right";
       top: -13px;
       left: 0;
-      color: #8c8e8a;
+      color: white;
       &::before {
         content: attr(text);
         font: 150px "Prismatic7-Left";
@@ -56,7 +66,7 @@
       position: absolute;
       top: 3px;
       left: 0;
-      color: #636362;
+      color: #ebebeb;
     }
     &::after {
       content: attr(text);
@@ -75,25 +85,51 @@
       display: flex;
       .project-number {
         position: relative;
-        font: 150px "Prismatic4-base";
-        &::after {
+        font: 100px "Prismatic3-BaseOutline";
+        z-index: 2;
+        &::before {
           content: attr(text);
-          font: 150px "Prismatic10-Bevel";
+          font: 100px "Prismatic1-DropShadow";
           position: absolute;
-          top: 0;
+          top: 6px;
           left: 0;
           color: black;
+          z-index: -1;
         }
       }
       .col {
         margin: 0 auto;
+        .project-title {
+          position: relative;
+          font: 100px "Prismatic3-BaseOutline";
+          z-index: 2;
+          margin-bottom: 20px;
+          &::before {
+            content: attr(text);
+            font: 100px "Prismatic1-DropShadow";
+            position: absolute;
+            top: 5px;
+            left: 0;
+            color: black;
+            z-index: -1;
+          }
+        }
         .project-description {
           color: #fffce9;
+          font: 20px "Prismatic4-base";
+          p {
+            display: flex;
+            justify-content: space-between;
+          }
         }
-        span {
+        .description-category {
           text-decoration: underline;
+          margin-right: 30px;
         }
       }
+    }
+    .project-image {
+      height: calc(50vh);
     }
   }
 }
@@ -103,8 +139,41 @@
   color: #fffce9;
   height: calc(100vh - 75px);
   padding-top: 75px;
-  h1 {
-    color: #f16381;
+  .g-title {
+    position: relative;
+    font: 150px "Prismatic11-Outline";
+    color: white;
+    .second-layer {
+      position: absolute;
+      font: 150px "Prismatic6-Right";
+      top: -13px;
+      left: 0;
+      color: #f37e96;
+      &::before {
+        content: attr(text);
+        font: 150px "Prismatic7-Left";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: #ee4266;
+      }
+    }
+    &::before {
+      content: attr(text);
+      font: 150px "Prismatic5-Bottom";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      color: #f16381;
+    }
+    &::after {
+      content: attr(text);
+      font: 150px "Prismatic8-Top";
+      position: absolute;
+      top: -9px;
+      left: 0;
+      color: #ee4266;
+    }
   }
   .container {
     display: grid;
@@ -122,6 +191,12 @@
         border-top: 1px solid #fffce9;
         padding: 35px 0;
       }
+      .subsection-title {
+        font: 32px "Prismatic4-Base";
+      }
+      .subsection-text {
+        font: 18px "Prismatic4-Base";
+      }
     }
   }
 }
@@ -131,12 +206,58 @@
   color: black;
   height: calc(100vh - 75px);
   padding-top: 75px;
+  .g-title {
+    position: relative;
+    font: 150px "Prismatic11-Outline";
+    color: black;
+    .second-layer {
+      position: absolute;
+      font: 150px "Prismatic6-Right";
+      top: -13px;
+      left: 0;
+      color: #8c8e8a;
+      &::before {
+        content: attr(text);
+        font: 150px "Prismatic7-Left";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        color: #222022;
+      }
+    }
+    &::before {
+      content: attr(text);
+      font: 150px "Prismatic5-Bottom";
+      position: absolute;
+      top: 2px;
+      left: 0;
+      color: #636362;
+    }
+    &::after {
+      content: attr(text);
+      font: 150px "Prismatic8-Top";
+      position: absolute;
+      top: -9px;
+      left: 0;
+      color: black;
+    }
+  }
   .email {
     margin: auto 0;
+    font: 70px "Quick Marker";
   }
   footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .credits {
+      font: 20px "Prismatic4-Base";
+      span {
+        font: 20px "Quick Marker";
+      }
+    }
+    .copyright {
+      font: 20px "Quick marker";
+    }
   }
 }

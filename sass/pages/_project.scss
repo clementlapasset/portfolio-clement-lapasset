@@ -20,11 +20,16 @@
       justify-content: space-between;
       height: 75%;
       align-self: end;
+      .project-title {
+        font: 65px "Prismatic11-Outline";
+      }
       .project-description {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+        font: 25px "Prismatic9-INLINE";
       }
       .project-link {
         text-decoration: underline;
+        font: 20px "Prismatic9-Inline";
       }
     }
   }
@@ -33,6 +38,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding-bottom: 50px;
+    margin-left: 20px;
     max-height: 850px;
     gap: 20px;
   }

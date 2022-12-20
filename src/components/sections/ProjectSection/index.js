@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
 import "../../../../css/main.css"
 
 const ProjectSection = () => {
@@ -33,10 +33,15 @@ const ProjectSection = () => {
 
   return (
     <div className='project-section g-section' id='projects'>
-      <div className='g-title' id="first-layer" text="PROJETS">
-        PROJETS
-        <div id="second-layer" text="PROJETS">
-          PROJETS
+      <div className="homepage-footer">
+        <div className='g-title' text="PROJETS">
+          PROJETS<div className="second-layer" text="PROJETS">PROJETS</div>
+        </div>
+        <div className="white-arrow-down">
+          <StaticImage
+            src='../../../images/white-arrow-down.svg'
+            alt='white arrow down'
+          />
         </div>
       </div>
       <ul>
@@ -46,12 +51,12 @@ const ProjectSection = () => {
               <div className="project-info">
                 <h1 className='project-number' text={node.frontmatter.number}>{node.frontmatter.number}</h1>
                 <div className="col">
-                  <h2 className='project-title'>{node.frontmatter.title}</h2>
+                  <h2 className='project-title' text={node.frontmatter.client}>{node.frontmatter.client}</h2>
                   <div className="project-description">
-                    <p> <span>CLIENT</span> - {node.frontmatter.client}</p>
-                    <p> <span>SECTEUR</span> - {node.frontmatter.domain}</p>
-                    <p> <span>RÔLE</span> - {node.frontmatter.role}</p>
-                    <p> <span>CATÉGORIE</span> - {node.frontmatter.type}</p>
+                    <p> <span className='description-category'>CLIENT</span> <span>{node.frontmatter.client}</span> </p>
+                    <p> <span className='description-category'>SECTEUR</span> <span>{node.frontmatter.domain}</span> </p>
+                    <p> <span className='description-category'>ROLE</span> <span>{node.frontmatter.role}</span> </p>
+                    <p> <span className='description-category'>CATEGORIE</span> <span>{node.frontmatter.type}</span> </p>
                   </div>
                 </div>
               </div>

@@ -6,12 +6,12 @@ import "../../../../css/main.css"
 const ContactSection = () => {
   return (
     <div className='contact-section g-section' id='contact'>
-      <h1 className='g-title'>CONTACT</h1>
-      <div className="email">
-        clement.lapasset@gmail.com
+      <div className='g-title' text="CONTACT">
+        CONTACT<div className="second-layer" text="CONTACT">CONTACT</div>
       </div>
+      <div className="email">clement.lapasset@gmail.com</div>
       <footer>
-        <div>Design & développement par Clément Lapasset</div>
+        <div className='credits'>Design & developpement par <span>Clement Lapasset</span></div>
         <Link to="#">
           <StaticImage className='footer-logo'
             src="../../../images/malt-logo.png"
@@ -30,7 +30,7 @@ const ContactSection = () => {
             alt="Ecoutez ma musique sur SoundCloud"
           />
         </Link>
-        <div>© 2022</div>
+        <div className='copyright'>© 2022</div>
       </footer>
     </div>
   )
