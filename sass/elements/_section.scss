@@ -1,3 +1,5 @@
+//Hero section
+
 .hero-section {
   color: #fffce9;
   mix-blend-mode: difference;
@@ -20,6 +22,8 @@
   }
 }
 
+//Project section
+
 .project-section {
   color: #fffce9;
   .homepage-footer {
@@ -28,20 +32,20 @@
     width: 52vw;
     .white-arrow-down {
       width: 85px;
-      height: 85px;
+      height: 60px;
       align-self: center;
     }
   }
   .g-title {
     position: relative;
     font: 150px "Prismatic11-Outline";
-    color: white;
+    color: #171b1a;
     .second-layer {
       position: absolute;
       font: 150px "Prismatic6-Right";
       top: -13px;
       left: 0;
-      color: white;
+      color: #e8e1cf;
       &::before {
         content: attr(text);
         font: 150px "Prismatic7-Left";
@@ -54,7 +58,7 @@
         content: attr(text);
         font: 150px "Prismatic10-Bevel";
         position: absolute;
-        top: 10px;
+        top: 11px;
         left: 0;
         color: black;
         z-index: 2;
@@ -66,7 +70,7 @@
       position: absolute;
       top: 3px;
       left: 0;
-      color: #ebebeb;
+      color: #e8e1cf;
     }
     &::after {
       content: attr(text);
@@ -81,21 +85,32 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 20px;
+    margin-bottom: 20px;
+    &:hover .project-image {
+      transform: translate(-10px, -10px);
+      box-shadow: 10px 10px black;
+    }
+    &:hover .project-number,
+    &:hover .project-title,
+    &:hover .project-description {
+      transform: translate(-10px, -10px);
+      transition: all 0.3s;
+      &::before {
+        content: attr(text);
+        font: 100px "Prismatic1-DropShadow";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        color: black;
+        z-index: -1;
+      }
+    }
     .project-info {
       display: flex;
       .project-number {
         position: relative;
         font: 100px "Prismatic3-BaseOutline";
         z-index: 2;
-        &::before {
-          content: attr(text);
-          font: 100px "Prismatic1-DropShadow";
-          position: absolute;
-          top: 6px;
-          left: 0;
-          color: black;
-          z-index: -1;
-        }
       }
       .col {
         margin: 0 auto;
@@ -104,15 +119,6 @@
           font: 100px "Prismatic3-BaseOutline";
           z-index: 2;
           margin-bottom: 20px;
-          &::before {
-            content: attr(text);
-            font: 100px "Prismatic1-DropShadow";
-            position: absolute;
-            top: 5px;
-            left: 0;
-            color: black;
-            z-index: -1;
-          }
         }
         .project-description {
           color: #fffce9;
@@ -130,9 +136,12 @@
     }
     .project-image {
       height: calc(50vh);
+      transition: all 0.3s;
     }
   }
 }
+
+//About section
 
 .about-section {
   background-color: #00272b;
@@ -142,7 +151,7 @@
   .g-title {
     position: relative;
     font: 150px "Prismatic11-Outline";
-    color: white;
+    color: #00272b;
     .second-layer {
       position: absolute;
       font: 150px "Prismatic6-Right";
@@ -195,11 +204,13 @@
         font: 32px "Prismatic4-Base";
       }
       .subsection-text {
-        font: 18px "Prismatic4-Base";
+        font: 22px "Prismatic9-Inline";
       }
     }
   }
 }
+
+//Contact section
 
 .contact-section {
   background-color: #fffce9;

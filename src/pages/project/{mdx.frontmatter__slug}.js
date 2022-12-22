@@ -14,7 +14,6 @@ const ProjectPage = ({ data, children }) => {
   const desktopImg2 = getImage(data.mdx.frontmatter.desktop_img_2)
 
   const url = data.mdx.frontmatter.url
-  console.log(url)
   return (
 
     <Layout pageTitle={data.mdx.frontmatter.number}>
@@ -26,16 +25,18 @@ const ProjectPage = ({ data, children }) => {
             className='mobile-img'
             image={mobileImg}
             alt={data.mdx.frontmatter.mobile_img_alt}
-
           />
           <div className="project-text">
             <h2 className='project-title'>{data.mdx.frontmatter.title}</h2>
             <div className="project-description">{children}</div>
-            {url ? (
-              <Link className='project-link' to={data.mdx.frontmatter.url} target="_blank">Visiter le site</Link>
-            ) : (
-              <div>Site non-accessible</div>
-            )}
+            <div className="row">
+              {url ? (
+                <Link className='project-link' to={data.mdx.frontmatter.url} target="_blank">Visiter le site</Link>
+              ) : (
+                <div>Site non-accessible</div>
+              )}
+              <Link className='next-project-link' to='/'>Projet suivant</Link>
+            </div>
           </div>
         </div>
         <div className="right-container">
@@ -51,7 +52,7 @@ const ProjectPage = ({ data, children }) => {
           />
         </div>
       </div>
-    </Layout>
+    </Layout >
   )
 }
 
