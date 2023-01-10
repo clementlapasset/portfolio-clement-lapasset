@@ -1,9 +1,9 @@
 .project-page {
   color: #fffce9;
   padding: 75px 20px 150px;
-  //height: calc(100vh - 75px);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  height: 100vh;
   .left-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -17,8 +17,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 75%;
-      align-self: end;
       .project-title {
         font: 65px "Prismatic11-Outline";
       }
@@ -40,9 +38,8 @@
   .right-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 50px;
-    margin-left: 20px;
+    justify-content: space-evenly;
+    margin: 20px 0 20px 20px;
     max-height: 850px;
     gap: 20px;
   }

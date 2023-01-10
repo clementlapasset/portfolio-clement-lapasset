@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { graphql, Link } from 'gatsby'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
 
 import Layout from '../../components/global/Layout'
 import Seo from '../../components/global/Seo'
