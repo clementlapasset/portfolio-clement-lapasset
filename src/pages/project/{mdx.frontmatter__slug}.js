@@ -34,7 +34,7 @@ const ProjectPage = ({ data, children }) => {
               ) : (
                 null
               )}
-              <Link className='next-project-link' to='/'>Projet suivant</Link>
+              <Link className='next-project-link' to={`/project/${data.mdx.frontmatter.next}`} >Projet suivant</Link>
             </div>
           </div>
           <div className="desktop-img">
@@ -61,6 +61,7 @@ export const query = graphql`
       url
       number
       bg_color
+      next
       mobile_img {
         childImageSharp {
           gatsbyImageData

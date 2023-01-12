@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
                 <li>PROJETS</li>
               </AnchorLink>
               <AnchorLink className='menu-item' to="/#about">
-                <li>A PROPOS</li>
+                <li>À PROPOS</li>
               </AnchorLink>
               <AnchorLink className='menu-item' to="/#contact">
                 <li>CONTACT</li>

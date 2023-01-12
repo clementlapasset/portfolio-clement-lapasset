@@ -10,33 +10,40 @@ const AboutSection = () => {
       <div className="container">
         <div className="subsection">
           <div className="subsection-title">
-            <p>*</p>
             <h2>PARCOURS</h2>
           </div>
           <div className="subsection-text">
-            DIPLOME DE L’EDHEC BUSINESS SCHOOL EN 2017, J'AI TRAVAILLE DANS LE SECTEUR DU CONSEIL PENDANT 4 ANS, D'ABORD A SOPRA STERIA CONSULTING PUIS A DELOITTE CONSEIL, JUSQU'A L'OBTENTION DU GRADE DE SENIOR CONSULTANT. <br />
-            PASSIONNE PAR LE CODE DEPUIS MES ETUDES, JE SUIS DEVENU DEVELOPPEUR EN 2022 AFIN D'ACCOMPLIR MA VOLONTE D'INDEPENDANCE ET DE CREATIVITE.
+            <ul>
+              <li>2017 : DIPLÔMÉ DE L'EDHEC BUSINESS SCHOOL</li>
+              <li>2017-2018 : CONSULTANT À SOPRA STERIA CONSULTING</li>
+              <li>2018-2021 : SENIOR CONSULTANT À DELOITTE CONSEIL</li>
+              <li>2022 : DÉVELOPPEUR WEB</li>
+            </ul>
           </div>
         </div>
         <div className="subsection">
           <div className="subsection-title">
-            <p>*</p>
-            <h2>METHODE</h2>
+            <h2>MÉTHODE</h2>
           </div>
           <div className="subsection-text">
-            FORT DE CE PARCOURS VARIE, J'ACCOMPAGNE MES CLIENTS EN M'APPUYANT SUR UNE ECOUTE ACTIVE DE LEURS BESOINS, UNE COMMUNICATION TRANSPARENTE ET REGULIERE, ET ENFIN UN TRAVAIL RIGOUREUX AFIN DE LIVRER DES SITES FONCTIONNELS ET PERFORMANTS. <br />
-            PRETANT UNE ATTENTION CONSTANTE A LA QUALITE, JE M'APPLIQUE A PRODUIRE UN CODE STRUCTURE ET LISIBLE, CE QUI FACILITE SA MAINTENABILITE ET SA REAPPROPRIATION.
+            <ul>
+              <li>ÉCOUTE ACTIVE DES BESOINS CLIENT</li>
+              <li>COMMUNICATION TRANSPARENTE ET RÉGULIÈRE</li>
+              <li>OBJECTIF DE PERFORMANCE DES PROJETS LIVRÉS</li>
+              <li>VEILLE DES MEILLEURES PRATIQUES & TECHNOLOGIES</li>
+            </ul>
           </div>
         </div>
         <div className="subsection">
           <div className="subsection-title">
-            <p>*</p>
             <h2>APTITUDES</h2>
           </div>
           <div className="subsection-text">
-            LANGAGES : REACTJS, EXPRESSJS, PHP, SASS, STYLED COMPONENTS <br />
-            ATOUTS : RELATION CLIENT, RIGUEUR, CREATIVITE
-            LANGUES : FRANCAIS, ANGLAIS, ESPAGNOL, BOSNIEN-CROATE-SERBE
+            <ul>
+              <li>LANGAGES : REACTJS, EXPRESSJS, PHP, SASS, STYLED COMPONENTS</li>
+              <li>ATOUTS : RELATION CLIENT, RIGUEUR, CRÉATIVITÉ</li>
+              <li>LANGUES : FRANÇAIS, ANGLAIS, ESPAGNOL, BOSNIEN-CROATE-SERBE</li>
+            </ul>
           </div>
         </div>
       </div>

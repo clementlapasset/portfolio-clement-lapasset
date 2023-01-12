@@ -56,8 +56,8 @@ const ProjectSection = () => {
                     <div className="project-description">
                       <p> <span className='description-category'>CLIENT</span> <span>{node.frontmatter.client}</span> </p>
                       <p> <span className='description-category'>SECTEUR</span> <span>{node.frontmatter.domain}</span> </p>
-                      <p> <span className='description-category'>ROLE</span> <span>{node.frontmatter.role}</span> </p>
-                      <p> <span className='description-category'>CATEGORIE</span> <span>{node.frontmatter.type}</span> </p>
+                      <p> <span className='description-category'>RÔLE</span> <span>{node.frontmatter.role}</span> </p>
+                      <p> <span className='description-category'>TYPE</span> <span>{node.frontmatter.type}</span> </p>
                     </div>
                   </div>
                 </div>

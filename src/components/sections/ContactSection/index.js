@@ -11,20 +11,20 @@ const ContactSection = () => {
       </div>
       <div className="email">clement.lapasset@gmail.com</div>
       <footer>
-        <div className='credits'>Design & developpement par <span>Clement Lapasset</span></div>
-        <Link to="#">
+        <div className='credits'>Design & développement par Clément Lapasset</div>
+        <Link to="https://www.malt.fr/">
           <StaticImage className='footer-logo'
             src="../../../images/malt-logo.png"
             alt="Mon profil Malt"
           />
         </Link>
-        <Link to="#">
+        <Link to="https://www.linkedin.com/in/cl%C3%A9ment-lapasset-646b49b3/">
           <StaticImage className='footer-logo'
             src="../../../images/linkedin-logo.png"
             alt="Mon profil LinkedIn"
           />
         </Link>
-        <Link to="#">
+        <Link to="https://soundcloud.com/user-557801017">
           <StaticImage className='footer-logo'
             src="../../../images/soundcloud-logo.png"
             alt="Ecoutez ma musique sur SoundCloud"

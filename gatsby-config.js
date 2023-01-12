@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `ClEment Lapasset`,
+    title: `Clément Lapasset`,
     siteUrl: `https://portfolioclementlapassetmain.gatsbyjs.io/`
   },
   plugins: [
