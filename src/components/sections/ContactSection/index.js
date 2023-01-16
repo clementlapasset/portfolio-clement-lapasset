@@ -15,19 +15,19 @@ const ContactSection = () => {
         <Link to="https://www.malt.fr/">
           <StaticImage className='footer-logo'
             src="../../../images/malt-logo.png"
-            alt="Mon profil Malt"
+            alt="Malt"
           />
         </Link>
         <Link to="https://www.linkedin.com/in/cl%C3%A9ment-lapasset-646b49b3/">
           <StaticImage className='footer-logo'
             src="../../../images/linkedin-logo.png"
-            alt="Mon profil LinkedIn"
+            alt="LinkedIn"
           />
         </Link>
         <Link to="https://soundcloud.com/user-557801017">
           <StaticImage className='footer-logo'
             src="../../../images/soundcloud-logo.png"
-            alt="Ecoutez ma musique sur SoundCloud"
+            alt="SoundCloud"
           />
         </Link>
         <div className='copyright'>© 2022</div>

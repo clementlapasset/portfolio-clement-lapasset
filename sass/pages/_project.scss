@@ -1,15 +1,18 @@
 .project-page {
   color: #fffce9;
   min-height: 100vh;
+
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-      "mobile-img title desktop-img"
-      "mobile-img desc desktop-img";
-    gap: 20px;
-    padding: 120px 20px 50px;
+      "mobile-img title"
+      "mobile-img desc"
+      "desktop-img desktop-img";
+    gap: 15px;
+    padding: 110px 10px 20px;
+
     .mobile-img {
       grid-area: mobile-img;
       display: flex;
@@ -19,29 +22,81 @@
       grid-area: title;
       display: flex;
       align-items: center;
-      font: 65px "Prismatic11-Outline";
+      font: 30px "Prismatic11-Outline";
+      @include media-breakpoint-up($small) {
+        font: 45px "Prismatic11-Outline";
+      }
+      @include media-breakpoint-up($large) {
+        font: 65px "Prismatic11-Outline";
+      }
     }
     .project-description {
       grid-area: desc;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      font: 22px "Prismatic9-Inline";
+      font: 12px "Acumin Pro";
+      @include media-breakpoint-up($small) {
+        font: 15px "Acumin Pro";
+      }
+      @include media-breakpoint-up($large) {
+        font: 20px "Acumin Pro";
+      }
+      text-transform: uppercase;
       .row {
         display: flex;
         justify-content: space-between;
-        font: 20px "Prismatic4-Base";
+        font: 12px "Acumin Pro";
+        @include media-breakpoint-up($small) {
+          font: 15px "Acumin Pro";
+        }
+        @include media-breakpoint-up($large) {
+          font: 20px "Acumin Pro";
+        }
         text-decoration: underline;
       }
     }
     .desktop-img {
       grid-area: desktop-img;
-      display: flex;
-      align-items: center;
-      justify-content: end;
+      display: none;
     }
     .project-img {
       border-radius: 15px;
+    }
+    @include media-breakpoint-up($medium) {
+      grid-template-columns: 1fr 1fr 2fr;
+      grid-template-areas:
+        "mobile-img title desktop-img"
+        "mobile-img desc desktop-img";
+      gap: 20px;
+      padding: 120px 20px 50px;
+      .project-description {
+        grid-area: desc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font: 15px "Acumin Pro";
+        @include media-breakpoint-up($large) {
+          font: 20px "Acumin Pro";
+        }
+        text-transform: uppercase;
+        .row {
+          display: flex;
+          justify-content: space-between;
+          font: 15px "Acumin Pro";
+          @include media-breakpoint-up($large) {
+            font: 20px "Acumin Pro";
+          }
+          text-decoration: underline;
+        }
+      }
+      .desktop-img {
+        grid-area: desktop-img;
+        display: block;
+      }
+      .project-img {
+        border-radius: 15px;
+      }
     }
   }
 }

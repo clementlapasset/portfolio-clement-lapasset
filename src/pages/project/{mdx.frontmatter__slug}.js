@@ -30,11 +30,11 @@ const ProjectPage = ({ data, children }) => {
             {children}
             <div className="row">
               {url ? (
-                <Link className='project-link' to={data.mdx.frontmatter.url} target="_blank">Visiter le site</Link>
+                <Link className='project-link' to={data.mdx.frontmatter.url} target="_blank">VISITER LE SITE</Link>
               ) : (
                 null
               )}
-              <Link className='next-project-link' to={`/project/${data.mdx.frontmatter.next}`} >Projet suivant</Link>
+              <Link className='next-project-link' to={`/project/${data.mdx.frontmatter.next}`} >PROJET SUIVANT</Link>
             </div>
           </div>
           <div className="desktop-img">

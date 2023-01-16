@@ -1,1 +1,11 @@
+// Breakpoints
+$small: 620px;
+$medium: 992px;
+$large: 1400px;
 
+// Media breakpoints mixin
+@mixin media-breakpoint-up($breakpoints) {
+  @media (min-width: $breakpoints) {
+    @content;
+  }
+} ;
