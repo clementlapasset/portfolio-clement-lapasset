@@ -34,9 +34,8 @@ const ProjectSection = () => {
   return (
     <div className='project-section g-section' id='projects'>
       <div className="homepage-footer">
-        <div className='g-title' text="PROJETS">
-          PROJETS<div className="second-layer" text="PROJETS">PROJETS</div>
-        </div>
+        <div className='g-title' text="PROJETS">PROJETS<div className="second-layer" text="PROJETS">PROJETS</div></div>
+
         <div className="white-arrow-down">
           <StaticImage
             src='../../../images/white-arrow-down.png'

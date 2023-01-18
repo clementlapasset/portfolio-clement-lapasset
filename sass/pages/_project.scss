@@ -1,7 +1,6 @@
 .project-page {
   color: #fffce9;
   min-height: 100vh;
-
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -10,13 +9,19 @@
       "mobile-img title"
       "mobile-img desc"
       "desktop-img desktop-img";
-    gap: 15px;
-    padding: 110px 10px 20px;
-
+    gap: 10px;
+    padding: 70px 10px 10px;
+    @include media-breakpoint-up($small) {
+      gap: 15px;
+      padding: 110px 10px 20px;
+    }
+    .project-img {
+      border-radius: 15px;
+    }
     .mobile-img {
       grid-area: mobile-img;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
     }
     .project-title {
       grid-area: title;
@@ -60,9 +65,7 @@
       grid-area: desktop-img;
       display: none;
     }
-    .project-img {
-      border-radius: 15px;
-    }
+
     @include media-breakpoint-up($medium) {
       grid-template-columns: 1fr 1fr 2fr;
       grid-template-areas:
@@ -93,9 +96,6 @@
       .desktop-img {
         grid-area: desktop-img;
         display: block;
-      }
-      .project-img {
-        border-radius: 15px;
       }
     }
   }

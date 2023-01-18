@@ -1,21 +1,41 @@
 .hero-section {
   color: #fffce9;
   mix-blend-mode: difference;
-  padding: 20px;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 210px);
+  @include media-breakpoint-up($small) {
+    height: calc(100vh - 330px);
+  }
+  @include media-breakpoint-up($medium) {
+    height: calc(100vh - 250px);
+  }
+  padding: 0 10px;
+  @include media-breakpoint-up($large) {
+    padding: 20px;
+  }
   .logo {
     font-family: "Quick Marker", sans-serif;
-    font-size: 78px;
+    font-size: 50px;
+    @include media-breakpoint-up($small) {
+      font-size: 60px;
+    }
+    @include media-breakpoint-up($medium) {
+      font-size: 78px;
+    }
     span {
       opacity: 0;
     }
   }
   .intro {
-    margin-top: 20px;
-    .layered-font {
-      position: relative;
-      font-family: "Acumin Pro", sans-serif;
+    margin-top: 10px;
+    position: relative;
+    font-family: "Acumin Pro", sans-serif;
+    font-size: 16px;
+    @include media-breakpoint-up($medium) {
       font-size: 20px;
+      margin-top: 20px;
+    }
+    @include media-breakpoint-up($medium) {
+      font-size: 22px;
     }
   }
 }
@@ -24,62 +44,96 @@
   color: #fffce9;
   .homepage-footer {
     display: flex;
-    justify-content: space-between;
-    width: 52vw;
+    @include media-breakpoint-up($medium) {
+      justify-content: space-between;
+      width: 52vw;
+    }
     .white-arrow-down {
       width: 85px;
       height: 60px;
       align-self: center;
+      display: none;
+      @include media-breakpoint-up($small) {
+        display: block;
+      }
     }
   }
   .g-title {
     position: relative;
-    font: 150px "Prismatic11-Outline";
     color: #171b1a;
-    .second-layer {
-      position: absolute;
-      font: 150px "Prismatic6-Right";
-      top: -13px;
-      left: 0;
-      color: #e8e1cf;
-      &::before {
-        content: attr(text);
-        font: 150px "Prismatic7-Left";
-        position: absolute;
-        top: 10px;
-        left: 0;
-        color: black;
-      }
-      &::after {
-        content: attr(text);
-        font: 150px "Prismatic10-Bevel";
-        position: absolute;
-        top: 11px;
-        left: 0;
-        color: black;
-        z-index: 2;
-      }
-    }
+    font: 150px "Prismatic11-Outline";
     &::before {
       content: attr(text);
-      font: 150px "Prismatic5-Bottom";
       position: absolute;
-      top: 3px;
-      left: 0;
       color: #e8e1cf;
+      font: 100px "Prismatic5-Bottom";
+      top: 40px;
+      left: 0;
+      @include media-breakpoint-up($small) {
+        font: 150px "Prismatic5-Bottom";
+        top: 3px;
+        left: 0;
+      }
     }
     &::after {
       content: attr(text);
-      font: 150px "Prismatic8-Top";
       position: absolute;
-      top: -9px;
-      left: 0;
       color: black;
+      font: 100px "Prismatic8-Top";
+      top: 33px;
+      left: 0;
+      @include media-breakpoint-up($small) {
+        font: 150px "Prismatic8-Top";
+        top: -9px;
+        left: 0;
+      }
+    }
+    .second-layer {
+      position: absolute;
+      color: #e8e1cf;
+      font: 100px "Prismatic6-Right";
+      top: 30px;
+      left: 0;
+      @include media-breakpoint-up($small) {
+        font: 150px "Prismatic6-Right";
+        top: -13px;
+        left: 0;
+      }
+      &::before {
+        content: attr(text);
+        position: absolute;
+        color: black;
+        font: 100px "Prismatic7-Left";
+        top: 7px;
+        left: 0;
+        @include media-breakpoint-up($small) {
+          font: 150px "Prismatic7-Left";
+          top: 12px;
+          left: 0;
+        }
+      }
+      &::after {
+        content: attr(text);
+        position: absolute;
+        z-index: 2;
+        color: black;
+        top: 6px;
+        left: 0;
+        font: 100px "Prismatic10-Bevel";
+        @include media-breakpoint-up($small) {
+          font: 150px "Prismatic10-Bevel";
+          top: 11px;
+          left: 0;
+        }
+      }
     }
   }
   .project-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    @include media-breakpoint-up($medium) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
     padding: 20px;
     margin-bottom: 20px;
     &:hover .project-image {
@@ -105,20 +159,53 @@
       display: flex;
       .project-number {
         position: relative;
-        font: 100px "Prismatic3-BaseOutline";
         z-index: 2;
+        font: 60px "Prismatic3-BaseOutline";
+        @media (hover: none) {
+          &::before {
+            content: attr(text);
+            font: 60px "Prismatic1-DropShadow";
+            position: absolute;
+            top: 4px;
+            left: 1px;
+            color: black;
+            z-index: -1;
+          }
+        }
+        @include media-breakpoint-up($medium) {
+          font: 100px "Prismatic3-BaseOutline";
+        }
       }
       .col {
         margin: 0 auto;
         .project-title {
           position: relative;
-          font: 100px "Prismatic3-BaseOutline";
           z-index: 2;
           margin-bottom: 20px;
+          font: 60px "Prismatic3-BaseOutline";
+          @media (hover: none) {
+            text-align: center;
+            &::before {
+              content: attr(text);
+              font: 60px "Prismatic1-DropShadow";
+              position: absolute;
+              top: 4px;
+              left: 50%;
+              transform: translate(-50%);
+              color: black;
+              z-index: -1;
+            }
+          }
+          @include media-breakpoint-up($medium) {
+            font: 100px "Prismatic3-BaseOutline";
+          }
         }
         .project-description {
           color: #fffce9;
-          font: 20px "Acumin Pro";
+          font: 14px "Acumin Pro";
+          @include media-breakpoint-up($small) {
+            font: 20px "Acumin Pro";
+          }
           p {
             display: flex;
             justify-content: space-between;
@@ -126,13 +213,16 @@
         }
         .description-category {
           font-weight: bold;
-          //text-decoration: underline;
           margin-right: 30px;
         }
       }
     }
     .project-image {
       transition: all 0.3s;
+      display: none;
+      @include media-breakpoint-up($medium) {
+        display: block;
+      }
     }
   }
 }
@@ -140,63 +230,117 @@
 .about-section {
   background-color: #00272b;
   color: #fffce9;
-  padding-top: 75px;
+  padding-top: 10px;
+  @include media-breakpoint-up($small) {
+    padding-top: 50px;
+  }
+  @include media-breakpoint-up($medium) {
+    padding-top: 75px;
+  }
   .g-title {
     position: relative;
-    font: 150px "Prismatic11-Outline";
+    font: 90px "Prismatic11-Outline";
     color: #00272b;
-    .second-layer {
-      position: absolute;
-      font: 150px "Prismatic6-Right";
-      top: -13px;
-      left: 0;
-      color: #f37e96;
-      &::before {
-        content: attr(text);
-        font: 150px "Prismatic7-Left";
-        position: absolute;
-        top: 10px;
-        left: 0;
-        color: #ee4266;
-      }
+    @include media-breakpoint-up($small) {
+      font: 150px "Prismatic11-Outline";
     }
     &::before {
       content: attr(text);
-      font: 150px "Prismatic5-Bottom";
       position: absolute;
-      top: 2px;
-      left: 0;
       color: #f16381;
+      font: 90px "Prismatic5-Bottom";
+      top: 39px;
+      left: 0;
+      @include media-breakpoint-up($small) {
+        font: 150px "Prismatic5-Bottom";
+        top: 3px;
+        left: 0;
+      }
     }
     &::after {
       content: attr(text);
-      font: 150px "Prismatic8-Top";
       position: absolute;
-      top: -9px;
-      left: 0;
       color: #ee4266;
+      font: 90px "Prismatic8-Top";
+      top: 33px;
+      left: 0;
+      @include media-breakpoint-up($small) {
+        font: 150px "Prismatic8-Top";
+        top: -8px;
+        left: 0;
+      }
+    }
+    .second-layer {
+      position: absolute;
+      color: #f37e96;
+      font: 90px "Prismatic6-Right";
+      top: 30px;
+      left: 0;
+      @include media-breakpoint-up($small) {
+        font: 150px "Prismatic6-Right";
+        top: -12px;
+        left: 0;
+      }
+      &::before {
+        content: attr(text);
+        position: absolute;
+        color: #ee4266;
+        font: 90px "Prismatic7-Left";
+        top: 7px;
+        left: 0;
+        @include media-breakpoint-up($small) {
+          font: 150px "Prismatic7-Left";
+          top: 10px;
+          left: 0;
+        }
+      }
     }
   }
   .container {
     display: grid;
     grid-template-columns: repeat (3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
+    @include media-breakpoint-up($medium) {
+      gap: 20px;
+    }
     .subsection {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 150px;
+      gap: 50px;
+      @include media-breakpoint-up($small) {
+        gap: 100px;
+      }
+      @include media-breakpoint-up($medium) {
+        gap: 150px;
+      }
       .subsection-title,
       .subsection-text {
         border-top: 1px solid #fffce9;
-        padding: 35px 0;
+        padding: 20px 0;
+        @include media-breakpoint-up($medium) {
+          padding: 35px 0;
+        }
       }
       .subsection-title {
-        font: 25px "Acumin Pro";
+        font-family: "Acumin Pro";
+        font-size: 16px;
+        @include media-breakpoint-up($small) {
+          font-size: 20px;
+        }
+        @include media-breakpoint-up($medium) {
+          font-size: 25px;
+        }
         text-align: end;
       }
       .subsection-text {
-        font: 18px "Acumin Pro";
+        font-family: "Acumin Pro";
+        font-size: 12px;
+        @include media-breakpoint-up($small) {
+          font-size: 14px;
+        }
+        @include media-breakpoint-up($medium) {
+          font-size: 18px;
+        }
         li {
           margin-bottom: 10px;
         }
