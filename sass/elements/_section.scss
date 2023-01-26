@@ -1,14 +1,18 @@
 .hero-section {
   color: #fffce9;
   mix-blend-mode: difference;
-  height: calc(100vh - 210px);
+  height: calc(100vh - 220px);
+  padding: 0 10px;
+
   @include media-breakpoint-up($small) {
-    height: calc(100vh - 330px);
+    height: calc(100vh - 160px);
+    padding: 0 10px;
   }
   @include media-breakpoint-up($medium) {
-    height: calc(100vh - 250px);
+    height: calc(100vh - 220px);
+    padding: 20px;
   }
-  padding: 0 10px;
+
   @include media-breakpoint-up($large) {
     padding: 20px;
   }
@@ -42,6 +46,11 @@
 
 .project-section {
   color: #fffce9;
+  padding: 0 10px;
+  @include media-breakpoint-up($medium) {
+    padding: 20px;
+  }
+
   .homepage-footer {
     display: flex;
     @include media-breakpoint-up($medium) {
@@ -147,12 +156,20 @@
       transition: all 0.3s;
       &::before {
         content: attr(text);
-        font: 100px "Prismatic1-DropShadow";
+        font: 60px "Prismatic1-DropShadow";
         position: absolute;
-        top: 6px;
+        top: 3px;
         left: 0;
         color: black;
         z-index: -1;
+        @include media-breakpoint-up($medium) {
+          font: 100px "Prismatic1-DropShadow";
+          position: absolute;
+          top: 6px;
+          left: 0;
+          color: black;
+          z-index: -1;
+        }
       }
     }
     .project-info {
@@ -324,13 +341,14 @@
       .subsection-title {
         font-family: "Acumin Pro";
         font-size: 16px;
+        text-align: center;
         @include media-breakpoint-up($small) {
           font-size: 20px;
+          text-align: end;
         }
         @include media-breakpoint-up($medium) {
           font-size: 25px;
         }
-        text-align: end;
       }
       .subsection-text {
         font-family: "Acumin Pro";
