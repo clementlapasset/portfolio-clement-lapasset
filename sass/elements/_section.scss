@@ -70,13 +70,16 @@
   .g-title {
     position: relative;
     color: #171b1a;
-    font: 150px "Prismatic11-Outline";
+    font: 110px "Prismatic11-Outline";
+    @include media-breakpoint-up($small) {
+      font: 150px "Prismatic11-Outline";
+    }
     &::before {
       content: attr(text);
       position: absolute;
       color: #e8e1cf;
-      font: 100px "Prismatic5-Bottom";
-      top: 40px;
+      font: 70px "Prismatic5-Bottom";
+      top: 38px;
       left: 0;
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic5-Bottom";
@@ -88,8 +91,8 @@
       content: attr(text);
       position: absolute;
       color: black;
-      font: 100px "Prismatic8-Top";
-      top: 33px;
+      font: 70px "Prismatic8-Top";
+      top: 34px;
       left: 0;
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic8-Top";
@@ -100,8 +103,8 @@
     .second-layer {
       position: absolute;
       color: #e8e1cf;
-      font: 100px "Prismatic6-Right";
-      top: 30px;
+      font: 70px "Prismatic6-Right";
+      top: 32px;
       left: 0;
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic6-Right";
@@ -112,8 +115,8 @@
         content: attr(text);
         position: absolute;
         color: black;
-        font: 100px "Prismatic7-Left";
-        top: 7px;
+        font: 70px "Prismatic7-Left";
+        top: 4px;
         left: 0;
         @include media-breakpoint-up($small) {
           font: 150px "Prismatic7-Left";
@@ -126,9 +129,9 @@
         position: absolute;
         z-index: 2;
         color: black;
-        top: 6px;
+        top: 5px;
         left: 0;
-        font: 100px "Prismatic10-Bevel";
+        font: 70px "Prismatic10-Bevel";
         @include media-breakpoint-up($small) {
           font: 150px "Prismatic10-Bevel";
           top: 11px;
@@ -256,7 +259,7 @@
   }
   .g-title {
     position: relative;
-    font: 90px "Prismatic11-Outline";
+    font: 70px "Prismatic11-Outline";
     color: #00272b;
     @include media-breakpoint-up($small) {
       font: 150px "Prismatic11-Outline";
@@ -265,7 +268,7 @@
       content: attr(text);
       position: absolute;
       color: #f16381;
-      font: 90px "Prismatic5-Bottom";
+      font: 70px "Prismatic5-Bottom";
       top: 39px;
       left: 0;
       @include media-breakpoint-up($small) {
@@ -278,8 +281,8 @@
       content: attr(text);
       position: absolute;
       color: #ee4266;
-      font: 90px "Prismatic8-Top";
-      top: 33px;
+      font: 70px "Prismatic8-Top";
+      top: 34px;
       left: 0;
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic8-Top";
@@ -290,8 +293,8 @@
     .second-layer {
       position: absolute;
       color: #f37e96;
-      font: 90px "Prismatic6-Right";
-      top: 30px;
+      font: 70px "Prismatic6-Right";
+      top: 32px;
       left: 0;
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic6-Right";
@@ -302,8 +305,8 @@
         content: attr(text);
         position: absolute;
         color: #ee4266;
-        font: 90px "Prismatic7-Left";
-        top: 7px;
+        font: 70px "Prismatic7-Left";
+        top: 5px;
         left: 0;
         @include media-breakpoint-up($small) {
           font: 150px "Prismatic7-Left";
@@ -378,7 +381,7 @@
 
   .g-title {
     position: relative;
-    font: 90px "Prismatic11-Outline";
+    font: 70px "Prismatic11-Outline";
     @include media-breakpoint-up($small) {
       font: 150px "Prismatic11-Outline";
     }
@@ -386,9 +389,9 @@
     color: black;
     .second-layer {
       position: absolute;
-      font: 90px "Prismatic6-Right";
+      font: 70px "Prismatic6-Right";
       left: 0;
-      top: -8px;
+      top: -7px;
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic6-Right";
         top: -13px;
@@ -396,12 +399,12 @@
       color: #8c8e8a;
       &::before {
         content: attr(text);
-        font: 90px "Prismatic7-Left";
+        font: 70px "Prismatic7-Left";
         @include media-breakpoint-up($small) {
           font: 150px "Prismatic7-Left";
           top: 10px;
         }
-        top: 7px;
+        top: 4px;
         position: absolute;
         left: 0;
         color: #222022;
@@ -409,19 +412,19 @@
     }
     &::before {
       content: attr(text);
-      font: 90px "Prismatic5-Bottom";
+      font: 70px "Prismatic5-Bottom";
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic5-Bottom";
         top: 2px;
       }
       position: absolute;
-      top: 1px;
+      top: 0px;
       left: 0;
       color: #636362;
     }
     &::after {
       content: attr(text);
-      font: 90px "Prismatic8-Top";
+      font: 70px "Prismatic8-Top";
       @include media-breakpoint-up($small) {
         font: 150px "Prismatic8-Top";
         top: -9px;
@@ -434,7 +437,7 @@
   }
   .email {
     margin: auto 0;
-    font: 30px "Quick Marker";
+    font: 25px "Quick Marker";
     @include media-breakpoint-up($small) {
       font: 50px "Quick Marker";
     }
