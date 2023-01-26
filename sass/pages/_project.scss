@@ -4,16 +4,17 @@
   .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
     grid-template-areas:
       "mobile-img title"
       "mobile-img desc"
       "desktop-img desktop-img";
     gap: 10px;
-    padding: 150px 10px 10px;
+    padding: 80px 10px 10px;
     @include media-breakpoint-up($small) {
       gap: 15px;
       padding: 110px 10px 20px;
+      grid-template-rows: 1fr 1fr;
     }
     .project-img {
       border-radius: 15px;
@@ -21,7 +22,10 @@
     .mobile-img {
       grid-area: mobile-img;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
+      @include media-breakpoint-up($small) {
+        align-items: flex-end;
+      }
     }
     .project-title {
       grid-area: title;
