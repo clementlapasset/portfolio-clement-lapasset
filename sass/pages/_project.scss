@@ -45,6 +45,7 @@
       flex-direction: column;
       justify-content: space-between;
       font: 12px "Acumin Pro";
+
       @include media-breakpoint-up($small) {
         font: 15px "Acumin Pro";
       }
@@ -62,7 +63,9 @@
         @include media-breakpoint-up($large) {
           font: 20px "Acumin Pro";
         }
-        text-decoration: underline;
+        .project-link {
+          text-decoration: underline;
+        }
       }
     }
     .desktop-img {
@@ -94,7 +97,6 @@
           @include media-breakpoint-up($large) {
             font: 20px "Acumin Pro";
           }
-          text-decoration: underline;
         }
       }
       .desktop-img {
