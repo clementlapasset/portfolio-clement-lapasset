@@ -12,19 +12,19 @@ const ContactSection = () => {
       <div className="email">clement.lapasset@gmail.com</div>
       <footer>
         <div className='credits'>Design & développement par Clément Lapasset</div>
-        <Link to="https://www.malt.fr/">
+        <Link to="https://www.malt.fr/" target="_blank">
           <StaticImage className='footer-logo'
             src="../../../images/malt-logo.png"
             alt="Malt"
           />
         </Link>
-        <Link to="https://www.linkedin.com/in/cl%C3%A9ment-lapasset-646b49b3/">
+        <Link to="https://www.linkedin.com/in/cl%C3%A9ment-lapasset-646b49b3/" target="_blank">
           <StaticImage className='footer-logo'
             src="../../../images/linkedin-logo.png"
             alt="LinkedIn"
           />
         </Link>
-        <Link to="https://soundcloud.com/user-557801017">
+        <Link to="https://soundcloud.com/user-557801017" target="_blank">
           <StaticImage className='footer-logo'
             src="../../../images/soundcloud-logo.png"
             alt="SoundCloud"
