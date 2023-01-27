@@ -12,7 +12,7 @@ const ContactSection = () => {
       <div className="email">clement.lapasset@gmail.com</div>
       <footer>
         <div className='credits'>Design & développement par Clément Lapasset</div>
-        <Link to="https://www.malt.fr/" target="_blank">
+        <Link to="https://www.malt.fr/profile/clementlapasset" target="_blank">
           <StaticImage className='footer-logo'
             src="../../../images/malt-logo.png"
             alt="Malt"
