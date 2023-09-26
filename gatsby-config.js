@@ -4,7 +4,7 @@
 module.exports = {
   siteMetadata: {
     title: `Clément Lapasset`,
-    siteUrl: `https://portfolioclementlapassetmain.gatsbyjs.io/`
+    siteUrl: `https://portfolioclementlapassetmain.gatsbyjs.io/`,
   },
   plugins: [
     "gatsby-plugin-mdx",
@@ -13,12 +13,13 @@ module.exports = {
       options: {
         name: `projects`,
         path: `${__dirname}/projects`,
-      }
+      },
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sass",
-    "gatsby-plugin-anchor-links"
-  ]
+    "gatsby-plugin-anchor-links",
+    "gatsby-plugin-netlify",
+  ],
 };
